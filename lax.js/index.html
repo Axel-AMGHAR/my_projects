@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="node_modules/lax.js/lib/lax.min.js"></script>
+    <title>lax.js</title>
+  </head>
+  <body>
+    <div style="height: 1000px;"></div>
+    <div>
+      <h1 class="lax" data-lax-preset="spinOut ">
+        Laxxx Example
+      </h1>
+    </div>
+    <p class="lax" data-lax-preset="blurOut fadeIn ">
+      Look at me goooooo!
+    </p>
+    <p
+      class="lax"
+      data-lax-opacity="0 0 ,200 1, 400 1, 600 0 "
+      data-lax-anchor="self"
+    >
+      I start to fade out after the window scrolls 100px and then I'm gone by
+      200px!
+    </p>
+    <p class="lax" data-lax-opacity=" 400 1, 0 0" data-lax-anchor="self">
+      I start to fade out after I'm 100px away from the top of the window and
+      then I'm gone by the time I reach the top!
+    </p>
+    <div style="height: 1000px;"></div>
+    <script type="text/javascript">
+      window.onload = function() {
+        lax.setup();
+
+        const updateLax = () => {
+          lax.update(window.scrollY);
+          window.requestAnimationFrame(updateLax);
+        };
+
+        window.requestAnimationFrame(updateLax);
+      };
+    </script>
+  </body>
+</html>
