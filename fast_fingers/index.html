@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fast fingers</title>
+    <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/9ce41bd472.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        const cl = data => console.log(data);
+
+    </script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        * {
+            font-size: 30px;
+        }
+
+        button {
+            border: none;
+        }
+
+        body {
+            background-color: #1E90FF;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .text {
+            background-color: #fff;
+            height: 6em;
+            line-height: 1.4em;
+            overflow: hidden;
+            border: 1px solid grey;
+            border-radius: 4px;
+            padding: 5px 17px;
+
+        }
+
+        .back_input {
+            background-color: #A7C8E7;
+            border: 1px solid grey;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: row;
+            width: 60%;
+            margin: 5px auto;
+        }
+
+        input {
+            width: 100%;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .time {
+            padding: 10px;
+            margin: 0 10px;
+            color: white;
+            background-color: #3c4d5c;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .refresh {
+            background-color: #428bca;
+            padding: 10px;
+            margin: 0 10px;
+            text-align: center;
+            color: white;
+            border-radius: 6px;
+            width: 2.5em;
+        }
+
+        i {
+            font-size: 25px;
+        }
+
+        /* card */
+
+        .card {
+            width: 15rem;
+            margin: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text"></div>
+        <div class="back_input">
+            <div class="input">
+                <input type="text">
+                <div class="time">1:00</div>
+                <button class="refresh"><i class="fas fa-sync"></i></button>
+            </div>
+        </div>
+        <div class="card d-none">
+            <div class="card-header text-primary">
+                Résultat
+            </div>
+            <div class="card-body text-center">
+                <h3 class="card-title text-success"></h3>
+                <p class="card-text">(mots par minute) </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between"> <span>Frappes</span> <span>(<span class='good_strokes' style="color: green"></span> | <span class='bad_strokes' style="color: red"></span>) <span class="total"></span> </span></li>
+                <li class="list-group-item d-flex justify-content-between"> <span>Précision</span> <span class="prec"></span></li>
+                <li class="list-group-item d-flex justify-content-between"> <span>Mots correct</span> <span class='good_words' style="color: green"> 28</span></li>
+                <li class="list-group-item d-flex justify-content-between"> <span>Mots incorrects</span> <span class='bad_words' style="color: red"> 2</span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $.ajax({
+                url: 'https://api.github.com/repos/nmondon/mots-frequents/contents/data/frequence.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data, state) {
+                    const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
+
+                    let word_number = 0;
+                    let good_strokes = 0;
+                    let bad_strokes = 0;
+                    let good_words = 0;
+                    let bad_words = 0;
+
+                    const word_coloring = color => {
+                        let word = $('.word' + word_number);
+                        word.css({
+                            "background-color": color,
+                            "border-radius": "4px",
+                            "padding": "3px"
+                        });
+                    };
+
+                    const world_color = color => {
+                        $('.word' + word_number).css({
+                            "background-color": "white",
+                            "color": color
+                        });
+                    }
+
+                    let words = JSON.parse(decodeURIComponent(
+                        escape(atob(data.content))
+                    ));
+
+                    let max = words.length;
+
+                    let string = '';
+                    for (let i = 0; i < 100; i++) {
+                        let int = getRandomInt(max);
+                        let word = words[int].label;
+                        string += word + ' ';
+                        $('.text').append($('<span>', {
+                            class: 'word' + i
+                        }).text(word)).append(' ');
+                    }
+
+                    let tab = string.split(' ');
+                    word_coloring("#DCDCDC");
+                    let last_input_size = 0;
+                    let timer_stop = true;
+
+                    const end = () => {
+                        $('input').attr('readonly', '');
+                        $('.card-title').text(good_words +' MPM');
+                        $('.good_strokes').text( good_strokes + ' ');
+                        $('.bad_strokes').text(' '+ bad_strokes);
+                        $('.total').text(good_strokes+bad_strokes);
+                        $('.prec').text(eval(good_strokes/(good_strokes+bad_strokes)*100).toFixed(2) + '%')
+                        $('.good_words').text(good_words);
+                        $('.bad_words').text(bad_words);
+
+                        $('.card').removeClass('d-none');
+
+                    }
+                    const start_timer = () => {
+                        let time = $('.time').text().split(/[:]+/);
+                        let s = time[1];
+                        s = (s == 00 ? 59 : s - 1);
+                        if(s<10)s='0'+s;
+                        $('.time').text('0:' + s);
+                        if ($('.time').text() == '0:00') {
+                            end();
+                        } else {
+                            setTimeout(start_timer, 1000);
+
+                        }
+                    }
+                    $('input').on('input', function() {
+                        if (timer_stop) {
+                            setTimeout(start_timer, 1000);
+                            timer_stop = !timer_stop;
+                        }
+
+                        let val = $(this).val();
+                        if (val.slice(val.length - 1, val.length) === ' ' && val !== ' ') {
+                            let bool = val === tab[word_number] + ' ';
+                            world_color(bool ? 'green' : 'red');
+                            bool ? good_words++ : bad_words++;
+                            ++word_number;
+                            word_coloring("#DCDCDC");
+                            $(this).val('')
+                        } else if (val === ' ')
+                            $(this).val('');
+                        else {
+
+                            if (val === tab[word_number].slice(0, val.length)) {
+                                word_coloring('#DCDCDC');
+                                if (last_input_size < val.length)
+                                    good_strokes++;
+                                last_input_size = val.length;
+                            } else {
+                                word_coloring('red');
+                                if (last_input_size < val.length)
+                                    bad_strokes++;
+                                last_input_size = val.length;
+                            }
+                        }
+                    });
+
+                },
+                error: function(resultat, statut, erreur) {
+                    cl(erreur)
+                }
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
