@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Pixel art maker</title>
+
+    <!-- IN every project with jquery bootstrap and font axesome-->
+    <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/9ce41bd472.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        const cl = data => console.log(data);
+
+    </script>
+
+    <!-- Style -->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    
+    <!-- End every project -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="designs.js"></script>
+</head>
+
+<body>
+    <div class="row">
+      <div class="column">
+        <div class="inputs">
+          <h4>choose grid size</h4>
+          <form class="size-picker">
+            height:
+            <input type="number" class="input-height" name="height" min="1" max="50" value="25">
+            <br><br>
+            width:
+            <input type="number" class="input-width" name="width" min="1" max="50" value="25">
+            <input type="submit" class="submit-button" value="submit">
+            <p><em>also clears grid</em></p>
+          </form>
+          <h4>select color</h4>
+          <input type="color" class="color-picker" value="#6aa5b8">
+          <input type="button" class="quick-fill" value="fill">
+          <h4>mode</h4>
+          <input type="button" class="erase-mode" value="erase">
+          <p><em>or double-click to erase</em></p>
+          <input type="button" class="draw-mode" value="draw">
+        </div>
+      </div>
+      <div class="column">
+        <h1>Pixel Art Maker</h1>
+        <table class="pixel-canvas"></table>
+        <br>
+      </div>
+    </div>
+    
+
+</body>
+
+</html>
