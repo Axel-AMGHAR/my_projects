@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f5c4f26-1433-413c-9c3f-1266eddd4034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trackmania_nav_be_like/public/img/medal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trackmania_nav_be_like/resources/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trackmania_nav_be_like/resources/views/trackmania_nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/mime" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trackmania_nav_be_like/resources/views/trackmania_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Trackmania_nav_be_like/resources/views/trackmania_nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/autoprefixer" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/autoprefixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/detective" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/detective" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/purgecss" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/purgecss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tailwind" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tailwind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tailwindcss" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tailwindcss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,13 +54,13 @@
         <counts>
           <entry key="env" value="19" />
           <entry key="js" value="7" />
-          <entry key="php" value="1032" />
+          <entry key="php" value="1052" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="19" />
-          <entry key="Blade" value="1015" />
+          <entry key="Blade" value="1035" />
           <entry key="JavaScript" value="7" />
           <entry key="PHP" value="17" />
         </counts>
@@ -86,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/Trackmania_nav_be_like/resources/views/trackmania_nav.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
-              <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
+              <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -352,7 +357,7 @@
       <path value="$PROJECT_DIR$/Trackmania_nav_be_like/vendor/egulias/email-validator" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="951" />
     <option name="width" value="976" />
     <option name="height" value="1057" />
@@ -465,12 +470,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593028826705</updated>
-      <workItem from="1593028828015" duration="5636000" />
+      <workItem from="1593028828015" duration="6115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5636000" />
+    <option name="totallyTimeSpent" value="6115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -562,7 +567,7 @@
     <entry file="file://$PROJECT_DIR$/Trackmania_nav_be_like/resources/views/trackmania_nav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
+          <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
