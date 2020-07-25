@@ -6,22 +6,22 @@ var __asyncValues = (this && this.__asyncValues) || function (o) {
     function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
     function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var e_1, _a;
+Object.defineProperty(exports, "__esModule", { value: true });
 /* Hello world */
 var server_ts_1 = require("https://deno.land/std/http/server.ts");
 var s = server_ts_1.serve({ port: 8000 });
 console.log("http://localhost:8000/");
 try {
-    for (var s_1 = __asyncValues(s), s_1_1; s_1_1 = yield s_1.next(), !s_1_1.done;) {
+    for (var s_1 = __asyncValues(s), s_1_1; s_1_1 = await s_1.next(), !s_1_1.done;) {
         var req = s_1_1.value;
-        req.respond({ body: "Hello World\n" });
+        req.respond({ body: "test.html" });
     }
 }
 catch (e_1_1) { e_1 = { error: e_1_1 }; }
 finally {
     try {
-        if (s_1_1 && !s_1_1.done && (_a = s_1.return)) yield _a.call(s_1);
+        if (s_1_1 && !s_1_1.done && (_a = s_1.return)) await _a.call(s_1);
     }
     finally { if (e_1) throw e_1.error; }
 }

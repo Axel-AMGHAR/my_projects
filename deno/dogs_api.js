@@ -1,9 +1,10 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -34,21 +35,20 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 /* Api example */
 var mod_ts_1 = require("https://deno.land/x/oak/mod.ts");
 var env = Deno.env.toObject();
 var PORT = env.PORT || 4000;
-var HOST = env.HOST || '127.0.0.1';
+var HOST = env.HOST || "127.0.0.1";
 var cl = function (e) { return console.log(e); };
 var dogs = [
     {
-        name: 'Roger',
+        name: "Roger",
         age: 8,
     },
     {
-        name: 'Syd',
+        name: "Syd",
         age: 7,
     },
 ];
@@ -58,7 +58,9 @@ exports.getDogs = function (_a) {
 };
 exports.getDog = function (_a) {
     var params = _a.params, response = _a.response;
-    var dog = dogs.filter(function (dog) { return dog.name === params.name; });
+    var dog = dogs.filter(function (dog) {
+        return dog.name.toLowerCase() === params.name.toLowerCase();
+    });
     if (dog.length) {
         response.status = 200;
         response.body = dog[0];
@@ -69,19 +71,19 @@ exports.getDog = function (_a) {
 };
 exports.addDog = function (_a) {
     var request = _a.request, response = _a.response;
-    return __awaiter(_this, void 0, void 0, function () {
-        var body, _b, name, age;
+    return __awaiter(void 0, void 0, void 0, function () {
+        var _b, name, age;
         return __generator(this, function (_c) {
             switch (_c.label) {
-                case 0: return [4 /*yield*/, request.body()];
+                case 0: return [4 /*yield*/, request.body()
+                        .value];
                 case 1:
-                    body = _c.sent();
-                    _b = body.value, name = _b.name, age = _b.age;
+                    _b = _c.sent(), name = _b.name, age = _b.age;
                     dogs.push({
                         name: name,
                         age: age,
                     });
-                    response.body = { msg: 'OK' };
+                    response.body = { msg: "OK" };
                     response.status = 200;
                     return [2 /*return*/];
             }
@@ -90,20 +92,19 @@ exports.addDog = function (_a) {
 };
 exports.updateDog = function (_a) {
     var params = _a.params, request = _a.request, response = _a.response;
-    return __awaiter(_this, void 0, void 0, function () {
-        var temp, body, age;
+    return __awaiter(void 0, void 0, void 0, function () {
+        var temp, age;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
                     temp = dogs.filter(function (existingDog) { return existingDog.name === params.name; });
-                    return [4 /*yield*/, request.body()];
+                    return [4 /*yield*/, request.body().value];
                 case 1:
-                    body = _b.sent();
-                    age = body.value.age;
+                    age = (_b.sent()).age;
                     if (temp.length) {
                         temp[0].age = age;
                         response.status = 200;
-                        response.body = { msg: 'OK' };
+                        response.body = { msg: "OK" };
                         return [2 /*return*/];
                     }
                     response.status = 400;
@@ -122,18 +123,18 @@ exports.removeDog = function (_a) {
         response.body = { msg: "Cannot find dog " + params.name };
         return;
     }
-    response.body = { msg: 'OK' };
+    response.body = { msg: "OK" };
     response.status = 200;
 };
 var router = new mod_ts_1.Router();
 router
-    .get('/dogs', exports.getDogs)
-    .get('/dogs/:name', exports.getDog)
-    .post('/dogs', exports.addDog)
-    .put('/dogs/:name', exports.updateDog)
-    .delete('/dogs/:name', exports.removeDog);
+    .get("/dogs", exports.getDogs)
+    .get("/dogs/:name", exports.getDog)
+    .post("/dogs", exports.addDog)
+    .put("/dogs/:name", exports.updateDog)
+    .delete("/dogs/:name", exports.removeDog);
 var app = new mod_ts_1.Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 console.log("Listening on port " + PORT + "...");
-yield app.listen(HOST + ":" + PORT);
+await app.listen(HOST + ":" + PORT);
