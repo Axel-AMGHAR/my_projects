@@ -15,7 +15,7 @@ console.log("http://localhost:8000/");
 try {
     for (var s_1 = __asyncValues(s), s_1_1; s_1_1 = yield s_1.next(), !s_1_1.done;) {
         var req = s_1_1.value;
-        req.respond({ body: "Hello World\n" });
+        req.respond({ body: "test.html" });
     }
 }
 catch (e_1_1) { e_1 = { error: e_1_1 }; }
