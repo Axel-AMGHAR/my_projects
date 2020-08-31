@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b58f599-f909-4e71-989d-5aca3a1b1583" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../codewars/sudoku/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../codewars/sudoku/sudoku.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dogs_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/dogs_api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dogs_api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dogs_api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/mime" afterDir="false" />
@@ -35,7 +25,7 @@
     <session id="34305859">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.5" value="2" />
@@ -188,7 +178,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Application Data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deviceful" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="wsl://DEBIAN@/usr/bin/node" />
     <property name="node.js.selected.package.tslint" value="" />
@@ -230,12 +220,12 @@
       <workItem from="1595541823447" duration="705000" />
       <workItem from="1595543380381" duration="12000" />
       <workItem from="1595620621499" duration="967000" />
-      <workItem from="1598866046098" duration="627000" />
+      <workItem from="1598866046098" duration="925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7651000" />
+    <option name="totallyTimeSpent" value="7949000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -248,7 +238,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06396589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
