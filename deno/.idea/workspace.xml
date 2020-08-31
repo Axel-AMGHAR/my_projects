@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b58f599-f909-4e71-989d-5aca3a1b1583" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dogs_api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dogs_api/file.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/mime" afterDir="false" />
@@ -20,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/../trackmania_css/node_modules/.bin/purgecss" beforeDir="false" afterPath="$PROJECT_DIR$/../trackmania_css/node_modules/.bin/purgecss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../trackmania_css/node_modules/.bin/tailwind" beforeDir="false" afterPath="$PROJECT_DIR$/../trackmania_css/node_modules/.bin/tailwind" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../trackmania_css/node_modules/.bin/tailwindcss" beforeDir="false" afterPath="$PROJECT_DIR$/../trackmania_css/node_modules/.bin/tailwindcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../typescript/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../typescript/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +26,12 @@
     <session id="34305859">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,7 +48,7 @@
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="2" />
+          <entry key="TypeScriptServerServiceImpl" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -84,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dogs_api.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+            <state relative-caret-position="864">
+              <caret line="48" lean-forward="true" selection-end-line="130" selection-end-column="35" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -132,7 +128,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="951" />
     <option name="width" value="976" />
     <option name="height" value="1057" />
@@ -209,11 +205,14 @@
       <updated>1595526047960</updated>
       <workItem from="1595526049553" duration="4042000" />
       <workItem from="1595540508431" duration="1298000" />
+      <workItem from="1595541823447" duration="705000" />
+      <workItem from="1595543380381" duration="12000" />
+      <workItem from="1595620621499" duration="967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5340000" />
+    <option name="totallyTimeSpent" value="7024000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -226,8 +225,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.061833687" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.063432835" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -241,7 +241,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="10" weight="0.07832618" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -280,8 +280,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dogs_api.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        <state relative-caret-position="864">
+          <caret line="48" lean-forward="true" selection-end-line="130" selection-end-column="35" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
