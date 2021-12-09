@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deviceful Starter – non-npm</title>
+  </head>
+
+  <style>
+    /** An example of how to handle responsiveness **/
+    .laptop,
+    .phone,
+    .phone2 {
+      height: 250px;
+    }
+
+    @media (min-width: 768px) {
+      .laptop,
+      .phone {
+        height: 450px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .laptop,
+      .phone {
+        height: 600px;
+      }
+
+      .phone2{
+        height: 1500px;
+      }
+    }
+
+    /** Demo specific **/
+
+    body,
+    html {
+      margin: 0;
+    }
+
+    .phone,
+    .phone2 {
+      background: #222222;
+      cursor: pointer;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="phone"></div>
+    <div class="laptop"></div>
+
+    <div class="buttons">
+      <button onclick="laptop.close()">Close</button>
+      <button onclick="laptop.open()">Open</button>
+      <button onclick="laptop.swivel()">Swivel</button>
+      <button onclick="laptop.swivel({to: 0})">Center</button>
+      <button onclick="laptop.scroll()">Scroll Down</button>
+      <button onclick="laptop.scroll({direction: 'up'})">Scroll Up</button>
+    </div>
+    <div class="phone2"></div>
+    <script src="deviceful.min.js"></script>
+    <script>
+      // Check out deviceful.app for full documentation
+
+      /**
+       * Laptop Example
+       */
+      const driveIn = [
+          {
+              object: "model", // Swivel the device from -30 to 0 degrees
+              move: "rotation",
+              axis: "y",
+              duration: 1500,
+              easing: "swingTo",
+              from: -30,
+          },
+          {
+              object: "camera", // Move the camera down by 3 units
+              move: "position",
+              axis: "y",
+              duration: 2000,
+              easing: "easeOutQuad",
+              from: 3,
+          },
+          {
+              object: "camera", // Move the camera forward by 20 units
+              move: "position",
+              axis: "z",
+              duration: 2000,
+              easing: "easeOutQuad",
+              from: 20,
+          },
+          {
+              object: "camera", // Rotate the camera on the X axis from -5 to 0 degrees
+              move: "rotation",
+              axis: "x",
+              duration: 2000,
+              easing: "easeOutQuad",
+              from: -5,
+          },
+      ];
+
+      var laptop = new Deviceful({
+        parent: ".laptop",
+        device: "laptop",
+        screenshot: "between-us_big_picture.png",
+        screenshotHeight: 2402,
+          onLoadAnimation: driveIn,
+      });
+
+      /**
+       * Phone Example
+       */
+
+      var phoneLoadAnim = [
+          {
+              object: "camera",
+              move: "position",
+              axis: "y",
+              duration: 1500,
+              to: -1,
+          },
+          {
+              object: "model",
+              move: "rotation",
+              axis: "y",
+              to: 25,
+              duration: 3000,
+              delay: 1000,
+          },
+      ];
+
+      var phoneLoadAnim2 = [
+          {
+              object: "model",
+              move: "rotation",
+              axis: "y",
+              to: 360,
+              duration: 2000,
+              delay: 1000,
+          },
+      ];
+
+      var phone = new Deviceful({
+        parent: ".phone",
+        device: "phone",
+        screenshot: "between-us_small-picture.png",
+        cameraDistance: 15,
+          screenshotHeight: 4402,
+        cameraHeight: 1,
+        onLoadAnimation: phoneLoadAnim,
+      });
+
+      var phone2 = new Deviceful({
+          parent: ".phone2",
+          device: "phone",
+          screenshot: "between-us_small-picture.png",
+          cameraDistance: 30,
+          screenshotHeight: 4402,
+          onLoadAnimation: phoneLoadAnim2,
+      });
+
+      // Phones click animations
+
+      var phoneParent = document.querySelector(".phone");
+      var phoneFocusState = false;
+
+      phoneParent.addEventListener("click", function () {
+        if (!phoneFocusState) {
+          phone.swivel({ to: 0, duration: 1000 });
+          phone.scroll({ duration: 3000 });
+          phone.animate([
+            {
+              object: "camera",
+              move: "position",
+              axis: "z",
+              to: 30,
+              duration: 1000,
+            },
+            {
+              object: "camera",
+              move: "position",
+              axis: "y",
+              to: -2,
+              duration: 1000,
+            },
+          ]);
+          phoneFocusState = true;
+        } else {
+          phone.swivel({ to: 45, duration: 1000, easing: "easeOutQuad" });
+          phone.scroll({ direction: "up", duration: 3000 });
+          phone.animate([
+            {
+              object: "camera",
+              move: "position",
+              axis: "z",
+              to: 15,
+              duration: 1000,
+            },
+            {
+              object: "camera",
+              move: "position",
+              axis: "y",
+              to: -1,
+              duration: 1000,
+            },
+          ]);
+          phoneFocusState = false;
+        }
+      });
+
+      // Mount your Deviceful instances to start them
+      phone.mount();
+      phone2.mount();
+      laptop.mount();
+    </script>
+  </body>
+</html>
