@@ -1,4 +1,5 @@
 /* Api example */
+// @ts-ignore
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
 const env = Deno.env.toObject();

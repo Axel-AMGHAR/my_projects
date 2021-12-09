@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /* Api example */
+// @ts-ignore
 var mod_ts_1 = require("https://deno.land/x/oak/mod.ts");
 var env = Deno.env.toObject();
 var PORT = env.PORT || 4000;

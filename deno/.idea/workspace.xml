@@ -85,12 +85,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b58f599-f909-4e71-989d-5aca3a1b1583" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dogs_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/dogs_api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dogs_api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dogs_api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/atob" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" beforeDir="false" afterPath="$PROJECT_DIR$/../open_classroom/node_modules/.bin/live-server" afterDir="false" />
@@ -145,7 +140,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../cream_supply" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="wsl://DEBIAN@/usr/bin/node" />
     <property name="node.js.selected.package.tslint" value="" />
@@ -174,7 +169,10 @@
       <workItem from="1595526049553" duration="4042000" />
       <workItem from="1595540508431" duration="1298000" />
       <workItem from="1595681620069" duration="711000" />
-      <workItem from="1595683427242" duration="2802000" />
+      <workItem from="1595683427242" duration="3637000" />
+      <workItem from="1598018065719" duration="635000" />
+      <workItem from="1603963573500" duration="683000" />
+      <workItem from="1616074373629" duration="131000" />
     </task>
     <servers />
   </component>
@@ -188,7 +186,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/dogs_api.js" />
@@ -206,11 +204,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="277" y="62" key="SettingsEditor" timestamp="1595683763575">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1616074503513">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1595683763575" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1616074503513" />
   </component>
 </project>
